@@ -1,0 +1,34 @@
+$(document).ready(function(){
+    $(".first").owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        items:2,
+    });
+    $('.second').owlCarousel({
+        margin:2,
+        autoplay:true,
+        loop:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })
+});
+$(window).scroll(function(){
+    if($(this).scrollTop()>100)
+    {
+        $(".arrow").show()
+    }
+    else 
+    {
+        $(".arrow").hide()
+    }
+})
